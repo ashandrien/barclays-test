@@ -1,0 +1,18 @@
+<div class="well" id="membership">
+	<div class="errors alert" role="alert">
+		<p>{{errorMessage}}</p>
+	</div>
+	<p>Please enter your membership number:</p>
+	<form ng-submit="logIn()">
+		<div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="Membership Number"
+	      ng-model="user.memberNo"></input>
+	    </div>
+		<button type="submit" class="btn btn-primary btn-submit">Submit</button>
+	</form>
+	<div ng-hide="memberNo" class="memberNo">
+		<p><strong>If you don&#39;t have a membership number, click <a href="#/register">here</a> to register</strong></p>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+  <div ng-show="error" class="alert alert-danger row">
+    <span>{{ error.message }}</span>
+  </div>
+
+  <form ng-submit="register()"
+    style="margin-top:30px;">
+    <div class="alert errors"><p>{{errorMsg}}</p></div>
+    <h3>Register</h3>
+    <p>Membership numbers must be between 1 and 100</p>
+    <div class="form-group">
+      <input type="text"
+      class="form-control"
+      placeholder="Membership Number"
+      ng-model="user.memberNo"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>

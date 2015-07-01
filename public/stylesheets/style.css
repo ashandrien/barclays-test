@@ -1,0 +1,148 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.page-header h1 {
+	text-align: center;
+}
+#dash-buttons button {
+	display: block;
+	font-size: 1.5em;
+	margin: 1em auto;
+	width: 100%;
+}
+#membership {
+	text-align: center;
+}
+#membership input {
+	margin: 0 auto 20px;
+	width: 50%;
+}
+#membership label {
+	margin-bottom: 20px;
+}
+#membership .memberNo {
+	margin-top: 20px;
+}
+#membership .memberNo p {
+	margin-bottom: 20px;
+}
+form button a {
+	color: white;
+}
+#parking-spaces {
+	background: #dedede;
+	box-sizing: border-box;
+	padding: 15px;
+	width: 100%;
+}
+#parking-spaces .left-column {
+	border-bottom: 3px solid yellow;
+	border-left: 3px solid yellow;
+	float: left;
+	width: 40%;
+}
+#parking-spaces .time-select {
+	float:right;
+	width: 50%;
+}
+#parking-spaces .space {
+	border-top: 3px solid yellow;
+	box-sizing: border-box;
+	width: 100%;
+	height: 90px;
+	padding: 9px;
+}
+
+#parking-spaces .right-column .space {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+
+.car {
+	background: rgba(219,33,50,0.5);
+	border-top-left-radius: 20%;
+	border-top-right-radius: 20%;
+	float: left;
+	height: 70%;
+	position: relative;
+	width: 50%;
+}
+.position, .timeIn {
+	text-align: center;
+	width: 50%;
+}
+.car:before, .car:after {
+	background: rgba(0,0,0,0.5);
+	content: '';
+	position: absolute;
+	border: 2px solid rgba(0,0,0,1);
+	border-radius: 100%;
+	bottom: -15px;
+	height: 20px;
+	width: 20px;
+	z-index: 2;
+}
+#parking-spaces .right-column .car {
+	float: right;
+}
+.car:before {
+	left: 20px;
+}
+.car:after {
+	right: 20px;
+}
+.space {
+	background-color: rgba(219,33,50,0.3);
+}
+.space.open {
+	background-color: rgba(33,219,88,0.3);
+	cursor: pointer;
+	-webkit-animation: flash 0.75s alternate infinite ease-in-out;
+	-o-animation: flash 0.75s alternate infinite ease-in-out;
+	-moz-animation: flash 0.75s alternate infinite ease-in-out;
+	animation: flash 0.75s alternate infinite ease-in-out;
+}
+.space.open .car {
+	display: none;
+}
+@-webkit-keyframes flash {
+	from { background-color:transparent; }
+	to { background-color: rgba(33,219,88,0.5); }
+}
+@-o-keyframes flash {
+	from { background-color:transparent; }
+	to { background-color: rgba(33,219,88,0.5); }
+}
+@-moz-keyframes flash {
+	from { background-color:transparent; }
+	to { background-color: rgba(33,219,88,0.5); }
+}
+@keyframes flash {
+	from { background-color:transparent; }
+	to { background-color: rgba(33,219,88,0.5); }
+}
+.errors {
+	color: red;
+	font-weight: bold;
+}
+#parking-spaces label {
+	float:left;
+	clear:left;
+}
+#parking-spaces input[type="radio"] {
+	margin-right: 10px;
+}
+#parking-spaces .car {
+	text-align: center;
+}
+#parking-spaces .leave {
+	margin: 10px auto;
+	float: none;
+}
