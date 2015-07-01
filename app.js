@@ -21,7 +21,7 @@ var users = require('./routes/users');
 var routes = require('./routes/index');
 
 
-var app = express();
+var app = express.createServer(express.logger());
 
 
 // view engine setup
