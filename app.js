@@ -15,7 +15,7 @@ require('./models/Users');
 require('./models/Spaces');
 require('./config/passport');
 
-mongoose.connect('mongodb://localhost/news');
+mongoose.connect('mongodb://ashandrien:shanghai3@ds035290.mongolab.com:35290/barclays_test');
 
 var users = require('./routes/users');
 var routes = require('./routes/index');
