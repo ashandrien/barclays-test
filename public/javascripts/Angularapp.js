@@ -6,7 +6,7 @@ function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('home', {
-		url: '/home',
+		url: '/',
     	templateUrl: '/dashboard.html',
     	controller: 'DashCtrl'
     })
@@ -55,7 +55,7 @@ function($stateProvider, $urlRouterProvider) {
 	      	$state.go('status');
 	    }
 	  }]
-	});
+	}).otherwise('home');
 }]);
 
 app.factory('auth',['$http', '$window', function($http,$window) {
@@ -444,12 +444,10 @@ app.controller('StatusCtrl', [
 			}
 		}
 		$scope.logOut = function() {
-			$state.go('register');
 			$scope.logOut = auth.logOut;
+			$state.go('register');
 			return auth.logOut;
 		}
-		
-		
 	    // Start the timer
 	    $timeout(tick, $scope.tickInterval);
 	}
