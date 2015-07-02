@@ -1,9 +1,8 @@
-<h2>Parking Status</h2><p class="pull-left">logged in as member #: {{memberNo}}</p><button class="btn btn-default pull-right" ng-click="logOut()">log out</button>
+<h2>Parking Status</h2><p class="pull-left">logged in as member #: {{memberNo}}</p><button class="btn btn-default pull-right" ng-click="logOut()"><a href="/#/login/">log out</a></button>
 <p class="clear pull-left">current time: <span class="time-left">{{ clock  | date:"hh:mm a"}}</span></p>
 <div class="alert errors clear pull-left">{{errorMessage}}</div>
 <div id="parking-spaces" class="clear">
 	<div class="left-column">
-
 		<div class="space" ng-class="{true:'',false:'open'}[space.taken]" ng-repeat="space in spaces | orderBy: 'position'"><button ng-hide="space.taken" ng-click="showTimeChoice(space)">Park Here</button><div class="car"><button class="leave" ng-show="isUser(space)" ng-click="unPark(space)">Leave</button></div><h4 class="position pull-right">{{space.position}}</h4><p class="timeLeave pull-right">{{space.timeLeave | date: "hh:mm a"}}</p></div>
 	</div>
 	<div class="time-select" ng-show="selecting">
