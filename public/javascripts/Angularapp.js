@@ -55,7 +55,7 @@ function($stateProvider, $urlRouterProvider) {
 	      	$state.go('status');
 	    }
 	  }]
-	}).otherwise('home');
+	});
 }]);
 
 app.factory('auth',['$http', '$window', function($http,$window) {
